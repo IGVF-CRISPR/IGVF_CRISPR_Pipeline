@@ -26,8 +26,8 @@ sequence_spec:
   name: Read 2
   modality: guide
   primer_id: r2_primer
-  min_len: 150
-  max_len: 150
+  min_len: 43
+  max_len: 43
   strand: neg
 library_spec:
 - !Region
@@ -79,17 +79,6 @@ library_spec:
     regions: null
   - !Region
     parent_id: guide
-    region_id: common
-    region_type: common
-    name: common
-    sequence_type: fixed
-    sequence: CTTGTGGAAAGGACGAAACACCG
-    min_len: 23
-    max_len: 23
-    onlist: null
-    regions: null
-  - !Region
-    parent_id: guide
     region_id: cdna
     region_type: cdna
     name: cdna
@@ -97,6 +86,17 @@ library_spec:
     sequence: NNNNNNNNNNNNNNNNNNNN
     min_len: 20
     max_len: 20
+    onlist: null
+    regions: null
+  - !Region
+    parent_id: guide
+    region_id: common
+    region_type: common
+    name: common
+    sequence_type: fixed
+    sequence: CTTGTGGAAAGGACGAAACACCG
+    min_len: 23
+    max_len: 23
     onlist: null
     regions: null
   - !Region
