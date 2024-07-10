@@ -1,0 +1,2 @@
+2024-07-10 14:07:16	-	modest_curran	-	261baf1653a6363261e60b9fb6314ad6	258e703f-0be2-4778-b32f-5773a51ed2c2	nextflow run main.nf -config input.config
+2024-07-10 14:10:35	7.5s	loquacious_pike	OK	14eb17f136f6ac7f4f26342955be5f7c	bc66e033-7c25-4b08-8d2b-fe0a56e41828	nextflow run main.nf -config input.config
