@@ -14,7 +14,7 @@ library_protocol: ''
 library_kit: Not-specified
 sequence_spec:
 - !Read 
-  read_id: R1.fastq.gz
+  read_id: multiseq_R1.fq
   name: Read 1
   modality: multiseq
   primer_id: r1_primer
@@ -22,7 +22,7 @@ sequence_spec:
   max_len: 26
   strand: pos
 - !Read
-  read_id: R2.fastq.gz
+  read_id: multiseq_R2.fq
   name: Read 2
   modality: multiseq
   primer_id: r2_primer
