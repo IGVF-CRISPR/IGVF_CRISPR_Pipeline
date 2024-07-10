@@ -13,7 +13,7 @@ sequence_kit: Not-specified
 library_protocol: 10xv3 RNA
 library_kit: Not-specified
 sequence_spec:
-- !Read # contains UMI and barcode
+- !Read 
   read_id: scRNA_R1.fq
   name: Read 1
   modality: rna
@@ -30,13 +30,13 @@ sequence_spec:
   max_len: 150
   strand: neg
 library_spec:
-- !Region # overall structure and length of the reads
+- !Region 
   parent_id: null
   region_id: rna
   region_type: null
   name: null
   sequence_type: null
-  sequence: AAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNNNNNNNNNNXAAAAAAAAAAAAAAAA # N- variable positions; X- can be fixed or variable
+  sequence: AAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNNNNNNNNNNXAAAAAAAAAAAAAAAA 
   min_len: 61
   max_len: 360
   onlist: null
@@ -47,7 +47,7 @@ library_spec:
     region_type: r1_primer
     name: r1_primer
     sequence_type: fixed
-    sequence: AAAAAAAAAAAAAAAA # a known primer/ constant region
+    sequence: AAAAAAAAAAAAAAAA 
     min_len: 16
     max_len: 16
     onlist: null
@@ -57,11 +57,11 @@ library_spec:
     region_id: barcode
     region_type: barcode
     name: barcode
-    sequence_type: onlist # must match one from a predefined list of valid sequences
+    sequence_type: onlist 
     sequence: NNNNNNNNNNNNNNNN
     min_len: 16
     max_len: 16
-    onlist: !Onlist # all barcode info for reproducibility and accuracy
+    onlist: !Onlist 
       location: remote
       filename: 3M-february-2018.txt.gz
       md5: 417292fed237e038f4d7e20b0ddac53e
@@ -82,7 +82,7 @@ library_spec:
     region_id: cdna
     region_type: cdna
     name: cdna
-    sequence_type: fixed # X- is flexible without specifying; cDNA can vary in length and content, but still needs to be identified distinctly from completely random sequences
+    sequence_type: fixed 
     sequence: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     min_len: 1 
     max_len: 150
