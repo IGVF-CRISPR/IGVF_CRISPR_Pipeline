@@ -1,0 +1,2 @@
+modality	representation	barcode_whitelist	seqspec_dir
+rna	0,0,16:0,16,28:1,0,150	example_data/3M-february-2018.txt.gz 	example_data
