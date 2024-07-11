@@ -1,8 +1,8 @@
 nextflow.enable.dsl=2
 
-include { seqSpecParser as seqSpecParser_rna } from './processes/seqSpecParser1'
-include { seqSpecParser as seqSpecParser_guide } from './processes/seqSpecParser1'
-include { seqSpecParser as seqSpecParser_multiseq } from './processes/seqSpecParser1'
+include { seqSpecParser as seqSpecParser_rna } from './processes/seqSpecParser'
+include { seqSpecParser as seqSpecParser_guide } from './processes/seqSpecParser'
+include { seqSpecParser as seqSpecParser_multiseq } from './processes/seqSpecParser'
 
 workflow {
     if (params.seqSpec_yaml_rna) {
