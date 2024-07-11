@@ -8,7 +8,7 @@ workflow {
         tuple(file(params.fastq_file1), file(params.fastq_file2)),
         file(params.transcriptome_idx),
         file(params.transcriptome_t2g),
-        file(params.parsed_seqSpec_directory),
+        file(params.parsed_seqSpec_file),
         file(params.whitelist),
      )
 }

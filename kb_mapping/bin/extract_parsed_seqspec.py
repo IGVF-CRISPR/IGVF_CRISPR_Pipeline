@@ -2,11 +2,9 @@
 
 import pandas as pd
 import argparse
-import glob
 import os
 
-def process_files(directory):
-    file_path = os.path.join(directory, 'rna_parsed_seqSpec.txt')
+def process_files(file_path):
     if not os.path.isfile(file_path):
         print("Cannot find the parsed_seqspec file")
         return None
@@ -16,11 +14,11 @@ def process_files(directory):
 
 def main():
     parser = argparse.ArgumentParser(description="Process parsed_seqspec files and extract seqspec info")
-    parser.add_argument('--directory', required=True, help="Directory containing the file.")
-    
+    parser.add_argument('--file', required=True, help="Path to the parsed_seqspec file.")
+
     args = parser.parse_args()
-    
-    result = process_files(args.directory)
+
+    result = process_files(args.file)
     if result:
         print(result)
 
