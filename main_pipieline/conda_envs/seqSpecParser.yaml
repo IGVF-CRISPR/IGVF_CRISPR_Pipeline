@@ -1,0 +1,11 @@
+name: seqSpecParser
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - numpy=1.23.5
+  - pandas=2.2.1
+  - pip
+  - pip:
+    - openpyxl==3.1.2
