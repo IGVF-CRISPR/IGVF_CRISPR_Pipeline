@@ -21,6 +21,6 @@ workflow {
         downloadRefResult.transcriptome_idx,
         downloadRefResult.t2g_transcriptome_index,
         seqSpecResult.parsed_seqspec,
-        file(params.whitelist)
+        seqSpecResult.whitelist
     )
 }

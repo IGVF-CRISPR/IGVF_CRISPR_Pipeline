@@ -9,6 +9,7 @@ process seqSpecParser {
 
   output:
     path "${modalities}_parsed_seqSpec.txt", emit: parsed_seqspec
+    path "${directory}/3M-february-2018.txt", emit: whitelist
 
   script:
     """
