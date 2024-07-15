@@ -1,6 +1,6 @@
 process mappingscRNA {
     cache 'lenient'
-    cpus 1
+    cpus 6
     debug true
     conda "./conda_envs/kallisto_ref.yaml"
 

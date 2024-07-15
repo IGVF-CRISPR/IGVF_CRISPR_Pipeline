@@ -1,4 +1,3 @@
-
 process mappingGuide {
     cache 'lenient'
     cpus 6
@@ -8,7 +7,7 @@ process mappingGuide {
     input:
     tuple path(fastq_file1), path(fastq_file2)
     path guide_index
-    path t2tguide_index
+    path t2guide
     path parsed_seqSpec_file
     path whitelist
 
@@ -20,6 +19,6 @@ process mappingGuide {
         """
         k_bin=\$(which kallisto)
         chemistry=\$(extract_parsed_seqspec.py --file ${parsed_seqSpec_file})
-        kb count -i ${guide_index} -g ${t2tguide_index} --verbose -w ${whitelist} --h5ad --kallisto \$k_bin -x \$chemistry -o ks_guide_out -t ${task.cpus} ${fastq_file1} ${fastq_file2} --overwrite -m 48G
+        kb count -i ${guide_index} -g ${t2guide} --verbose -w ${whitelist} --h5ad --kallisto \$k_bin -x \$chemistry -o ks_guide_out -t ${task.cpus} ${fastq_file1} ${fastq_file2} --overwrite -m 48G
         """
 }

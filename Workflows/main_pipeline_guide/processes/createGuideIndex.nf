@@ -9,7 +9,7 @@ process creatingGuideRef {
 
     output:
     path "guide_index.idx" ,  emit: guide_index
-    path "t2guide.txt" , emit: t2tguide_index
+    path "t2guide.txt" , emit: t2guide
 
     script:
 

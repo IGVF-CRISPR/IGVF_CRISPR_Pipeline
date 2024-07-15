@@ -1,16 +1,15 @@
 nextflow.enable.dsl=2
 
 include { seqSpecParser } from './processes/seqSpecParser.nf'
-include { downloadReference } from './processes/ref_download.nf'
-include { mappingscRNA } from './processes/kb_mapping.nf'
+include { downloadReference } from './processes/downloadReference.nf'
+include { mappingscRNA } from './processes/mappingscRNA.nf'
 
 workflow {
 
     seqSpecResult = seqSpecParser(
         file("${params.seqSpecDirectory}/${params.seqSpec_yaml_rna}"),
         file(params.seqSpecDirectory),
-        'rna'
-    )
+        'rna')
 
     downloadRefResult = downloadReference(
         params.TRANSCRIPTOME_REFERENCE
@@ -21,6 +20,5 @@ workflow {
         downloadRefResult.transcriptome_idx,
         downloadRefResult.t2g_transcriptome_index,
         seqSpecResult.parsed_seqspec,
-        seqSpecResult.whitelist
-    )
+        seqSpecResult.whitelist)
 }
