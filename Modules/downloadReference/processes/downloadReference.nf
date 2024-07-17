@@ -6,7 +6,7 @@ process downloadReference {
       
     output:
         path "transcriptome_index.idx" , emit: transcriptome_idx
-        path "transcriptome_t2g.txt"   , emit: t2t_transcriptome_index
+        path "transcriptome_t2g.txt"   , emit: t2g_transcriptome_index
     script:
         """
           k_bin=\$(which kallisto)

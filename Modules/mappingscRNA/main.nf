@@ -1,6 +1,6 @@
 nextflow.enable.dsl=2
 
-include { mappingscRNA } from './processes/kb_mapping'
+include { mappingscRNA } from './processes/mappingscRNA.nf'
 
 workflow {
   map_rna = mappingscRNA(
